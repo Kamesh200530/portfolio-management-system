@@ -13,7 +13,7 @@ import { PortfolioQRCard } from './portfolio-qr-card';
 import { PlacementInterestPoll } from './placement-interest-poll';
 import {
   Award, FolderKanban, Briefcase, BookOpen, Trophy, FileText,
-  CheckCircle2, Clock, TrendingUp, ArrowRight, User, Megaphone,
+  CheckCircle2, Clock, TrendingUp, ArrowRight, User, Megaphone, BrainCircuit, FilePenLine,
 } from 'lucide-react';
 import type { Announcement } from '@/lib/supabase';
 
@@ -196,6 +196,30 @@ export default function StudentDashboard() {
           portfolioVerified={profile.portfolio_verified}
         />
       </div>
+
+      <Link href="/dashboard/career-advisor" className="group mt-6 block">
+        <Card className="border-primary/20 bg-gradient-to-r from-primary/5 to-accent/5 transition-all hover:-translate-y-0.5 hover:shadow-md">
+          <CardContent className="flex flex-col gap-4 pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform group-hover:scale-105"><BrainCircuit className="h-6 w-6" /></div>
+              <div><h2 className="font-semibold">AI Career Advisor</h2><p className="mt-1 text-sm text-muted-foreground">Get personalized career recommendations based on your portfolio.</p></div>
+            </div>
+            <Button className="gap-2 sm:shrink-0">Analyze My Career <ArrowRight className="h-4 w-4" /></Button>
+          </CardContent>
+        </Card>
+      </Link>
+
+      <Link href="/dashboard/resume/builder" className="group mt-4 block">
+        <Card className="border-accent/20 bg-gradient-to-r from-accent/5 to-primary/5 transition-all hover:-translate-y-0.5 hover:shadow-md">
+          <CardContent className="flex flex-col gap-4 pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent transition-transform group-hover:scale-105"><FilePenLine className="h-6 w-6" /></div>
+              <div><h2 className="font-semibold">AI Resume Builder</h2><p className="mt-1 text-sm text-muted-foreground">Turn your portfolio into a polished, ATS-friendly resume.</p></div>
+            </div>
+            <Button variant="outline" className="gap-2 sm:shrink-0">Build My Resume <ArrowRight className="h-4 w-4" /></Button>
+          </CardContent>
+        </Card>
+      </Link>
 
       {/* Quick Actions */}
       <div className="mt-6">

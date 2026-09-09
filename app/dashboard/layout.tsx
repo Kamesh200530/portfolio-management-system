@@ -20,7 +20,7 @@ import {
   GraduationCap, LayoutDashboard, FolderKanban, Award, Briefcase,
   Trophy, Wrench, Link2, User as UserIcon, Bell, Search, Sun, Moon,
   LogOut, Menu, Settings, ChevronDown, BookOpen, Users, BarChart3,
-  CheckCircle2, FileText, Megaphone, Shield, ShieldAlert,
+  CheckCircle2, FileText, Megaphone, Shield, ShieldAlert, BrainCircuit,
 } from 'lucide-react';
 import type { UserRole } from '@/lib/supabase';
 import { supabase } from '@/lib/supabase';
@@ -46,6 +46,7 @@ function getNavItems(role: UserRole | undefined): NavItem[] {
       { label: 'Hackathons', href: '/dashboard/hackathons', icon: Trophy },
       { label: 'Social Links', href: '/dashboard/social', icon: Link2 },
       { label: 'Resume', href: '/dashboard/resume', icon: FileText },
+      { label: 'AI Career Advisor', href: '/dashboard/career-advisor', icon: BrainCircuit },
       { label: 'Profile', href: '/dashboard/profile', icon: UserIcon },
     ];
   }
@@ -103,7 +104,7 @@ const roleAllowedRoutes: Record<UserRole, string[]> = {
     '/dashboard', '/dashboard/portfolio', '/dashboard/projects', '/dashboard/certificates',
     '/dashboard/internships', '/dashboard/achievements', '/dashboard/skills',
     '/dashboard/workshops', '/dashboard/hackathons', '/dashboard/social',
-    '/dashboard/resume', '/dashboard/profile', '/dashboard/settings',
+    '/dashboard/resume', '/dashboard/career-advisor', '/dashboard/profile', '/dashboard/settings',
   ],
   faculty: [
     '/dashboard', '/dashboard/verifications', '/dashboard/students',

@@ -1,0 +1,8 @@
+[functions.user-management]
+verify_jwt = true
+
+[functions.career-advisor]
+verify_jwt = true
+
+[functions.resume-builder]
+verify_jwt = true
